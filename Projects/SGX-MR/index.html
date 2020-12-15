@@ -57,40 +57,43 @@ SGX-MR
 
 </div></div>
 
-<div class="card shadow p-3 mb-1 rounded" style="background-color: #B0E0E6">
+<div class="card shadow  mb-1 rounded" style="background-color: white">
 <div class="card-body">
 <center>
 <h3>
 SGX-MR: Regulating Dataflows for Protecting Access Patterns of Data-Intensive SGX Applications
 </h3>
-<br>
+
 <h6>
 <p class="text-secondary">
-Data-Intensive Analysis and Computing (DIAC) Lab, <br/>
-the Ohio Center of Excellence on Knowledge Enabled Computing (Kno.e.sis Center) <br/>
-Wright State University <br/>
+Trustworthy and Intelligent Computing Lab (TIC) <br/>
+Computer Science Department<br/>
+Marquette University<br/>
 </h6>
 </p>
+<a href="https://content.sciendo.com/view/journals/popets/2021/1/article-p5.xml?language=en" type="button" class="btn btn-outline-dark">Full Paper</a>
+<a href="https://www.marquette.edu/arts-sciences/documents/alam-mubashwir-research-poster.pdf" type="button" class="btn btn-outline-dark">Poster</a>
+<a href="https://github.com/taserghar/sgx-mr" type="button" class="btn btn-outline-dark">Binary Release</a>
 <center>
 </div> </div>
 
 <div class="card bg-white shadow-sm p-0 mb-1 rounded">
 <div class="card-body">
-<h4>Abstract</h4>
+
 
 <p align="justify">
-Intel SGX has been a popular trusted execution environment (TEE) for protecting the integrity and confidentiality of applications running on untrusted platforms such as the cloud. However, the access patterns of SGX-based programs can still be observed by
-adversaries, which may leak important information for successful attacks. Researchers have been experimenting with Oblivious RAM (ORAM) to address the privacy of access patterns. ORAM is a powerful low-level primitive that provides application-agnostic protection for any I/O operations, however, at a high cost. We find that some application-specific access patterns, such as sequential block I/O, do not provide additional information to adversaries. Others, such as sorting, can be replaced with specific oblivious algorithms that are more efficient than ORAM. The challenge is that developers
-may need to look into all the details of applicationspecific access patterns to design efficient solutions, which is time-consuming and error-prone. In this paper, we present the lightweight SGX-MR approach that regulates the dataflow of data-intensive SGX applications for easier application-level access-pattern analysis and protection. It uses the MapReduce framework to cover a large class of data-intensive applications, and the whole framework can be implemented with a small memory footprint. With this framework, we can examine the stages of data processing, identify the access patterns that need protection, and design corresponding efficient protection methods. Our experiments show that SGX-MR-based applications take significantly less time than ORAM-based implementations.
-
+Intel SGX has been a popular trusted execution environment (TEE) for protecting the integrity and confidentiality of applications running on untrusted platforms such as cloud. However, the access patterns of SGX-based programs can still be observed by adversaries, which may leak important information for successful attacks. Researchers have been experimenting with Oblivious RAM (ORAM) to address the privacy of access patterns. ORAM is a powerful low-level primitive that provides application-agnostic protection for any I/O operations, however, at a high cost. We find that some application-specific access patterns, such as sequential block I/O, do not provide additional information to adversaries. Others, such as sorting, can be replaced with specific oblivious algorithms that are more efficient than ORAM. The challenge is that developers may need to look into all the details of application-specific access patterns to design suitable solutions, which is time-consuming and error-prone. In this paper, we present the lightweight SGX based MapReduce (SGX-MR) approach that regulates the dataflow of data-intensive SGX applications for easier application-level access-pattern analysis and protection. It uses the MapReduce framework to cover a large class of data-intensive applications, and the entire framework can be implemented with a small memory footprint. With this framework, we have examined the stages of data processing, identified the access patterns that need protection, and designed corresponding efficient protection methods. Our experiments show that SGX-MR based applications are much more efficient than ORAM-based implementations.
+<center>
+<img src="images/regulate.png" height="200"> <br/> <br/>
+<img src="images/result.png" height="200">
+</center>
 </p>
 </div> </div>
 
 <div class="card bg-white shadow-sm p-0 mb-1 rounded">
 <div class="card-body">
 
-<strong>Keywords: </strong> • Intel SGX • Access Pattern Protection • Side Channel Attack • Privacy • Security • Oblivious RAM • Cloud 
-
+<strong>Keywords: </strong> SGX-based data analytics • MapReduce • Data flow regularization • Access Patterns • ORAM • Privacy
 
 </div></div>
 
